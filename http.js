@@ -1,5 +1,6 @@
-import { send } from './request.mjs';
-import { read } from './response.mjs';
+const { send } = require('./request');
+const { read } = require('./response');
+const { decrypt } = require('./response');
 
 function makeRequest(url, data) {
   // 요청 보내기
@@ -10,4 +11,4 @@ function makeRequest(url, data) {
 
 const responseData = makeRequest('https://naver.com', 'any data');
 
-console.log(responseData);
+console.log(responseData)
